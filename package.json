@@ -1,5 +1,5 @@
 {
-  "name": "countrypedia",
+  "name": "countrybook",
   "version": "1.0.0",
   "description": "small encyclopedia for countries of the world",
   "main": "app.js",

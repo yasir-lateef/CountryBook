@@ -1,1 +1,1 @@
-var app = angular.module('CountryPedia', ['router','countriesCtrl', 'countriesService', 'regionsCtrl', 'regionsService']);
+var app = angular.module('CountryBook', ['router','countriesCtrl', 'countriesService', 'regionsCtrl', 'regionsService']);
