@@ -16,6 +16,7 @@
   "author": "Yasir Lateef",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.17"
   }
