@@ -1,0 +1,188 @@
+<!doctype html>
+<html ng-app='CountryPedia'>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>CountryPedia</title>
+
+	<meta name="Author" content="Yasir Lateef<yasirlateef112@gmail.com>">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+
+	<!-- Font Awesome CSS -->	
+	<link rel="stylesheet" type="text/css" href="/lib/font-awesome/css/font-awesome.min.css">
+
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Montserrat:700">
+	<!-- Style CSS -->
+	<link rel="stylesheet" type="text/css" href="/inc/stylesheets/style.css">
+
+	<!-- AngularJS -->
+	<script src="/lib/angular/angular.min.js"></script>
+	<script src="/lib/angular-route/angular-route.min.js"></script>
+
+	<!-- Services -->
+	<script src="/ngSrc/services/countries.js"></script>
+	<script src="/ngSrc/services/regions.js"></script>
+
+	<!-- Controllers -->
+	<script src="/ngSrc/controllers/countriesCtrl.js"></script>
+	<script src="/ngSrc/controllers/regionsCtrl.js"></script>
+
+	<!-- Router -->
+	<script src="/ngSrc/routes/index.js"></script>
+
+	<script src="../ngApp.js"></script>
+</head>
+
+<body>
+
+	<!-- Header
+		===================================================-->
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 text-center masked">
+					<h1>
+							CountryPedia<br>
+							<small>A Small Encyclopedia of Countries</small>
+						</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+
+	<!-- ngView
+		========================================================= -->
+	<section id="view">
+		<div class="container">
+			<div class="row">
+				<div ng-controller="regionsController" class="col-sm-3" id="sidebar-left">
+					<div class="sidebar-title">
+						<h2>Regions</h2>
+					
+						<div class="featurette">
+								<div class="featurette-inner text-center">
+										<form role="form" class="search">
+											<div class="input-group">
+													<input type="search" placeholder="search" ng-model="searchRegions" class="form-control">
+													<span class="input-group-btn">
+													<button class="btn btn-danger" type="button"><i class="fa fa-search"></i></button>
+													</span>
+											</div>
+											<!-- /input-group -->
+										</form>
+										<!-- /.max-width on this form -->
+									</div>
+									<!-- /.featurette-inner (display:table-cell) -->
+								</div>
+							<div>
+					</div>
+						<ul ng-repeat="region in regions | filter : searchRegions">
+							<li>
+								<h3><a href="#/regions/{{region.title}}?listcountries=true">{{region.title}}</a></h3>
+								<ul class="padding-left list-unstyled">
+									<li ng-repeat="sregion in region.subregions | filter : searchRegions">
+										<a href="#/regions/{{region.title}}/{{sregion}}">
+											{{sregion}}
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				<div ng-controller="countriesController" class="col-sm-3" id="sidebar-left">
+					<div class="sidebar-title">
+						<h2>List of Countries</h2>
+						
+						<div class="featurette">
+							<div class="featurette-inner text-center">
+									<form role="form" class="search">
+										<div class="input-group">
+												<input type="search" placeholder="search" ng-model="searchCountries" class="form-control">
+												<span class="input-group-btn">
+												<button class="btn btn-danger" type="button"><i class="fa fa-search"></i></button>
+												</span>
+										</div>
+										<!-- /input-group -->
+									</form>
+									<!-- /.max-width on this form -->
+
+							</div>
+							<!-- /.featurette-inner (display:table-cell) -->
+
+						</div>
+					</div>
+					<br><br>
+					<ul id="nav" class="list-unstyled list-underlined" >
+						<li ng-repeat="country in countries | filter: searchCountries">
+							<a href="#/countries/{{country.name}}">
+								{{country.name}}
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="col-sm-6">
+					<div ng-view></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer
+		================================================== -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<p id="copyright">&copy; 2016. CountryPedia</p>
+				</div>
+				<div class="col-sm-4 text-center">
+					<ul class="list-inline">
+						<li>
+							<a href="http://facebook.com/yasirlateeff" target="_blank" class="btn btn-primary">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="http://twitter.com/YasirLateefYLCo" target="_blank" class="btn btn-info">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://plus.google.com/u/0/116951668599345578514" target="_blank" class="btn btn-danger">
+								<i class="fa fa-google-plus"></i>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/yasir-lateef" target="_blank" class="btn btn-default">
+								<i class="fa fa-github"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-4 text-center">
+					<p id="credit">
+						<i class="fa fa-chevron-left"></i>
+						<i class="fa fa-chevron-right"></i> &nbsp;with
+						<i class="fa fa-heart"></i> &nbsp;by
+						<a href="mailto:yasirlateef112@gmail.com">Yasir Lateef</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="/lib/jquery/dist/jquery.min.js"></script>
+	<script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

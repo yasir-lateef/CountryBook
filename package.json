@@ -1,0 +1,22 @@
+{
+  "name": "countrypedia",
+  "version": "1.0.0",
+  "description": "small encyclopedia for countries of the world",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "keywords": [
+    "encyclopedia",
+    "information",
+    "countries",
+    "regions",
+    "subregions"
+  ],
+  "author": "Yasir Lateef",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "mongoose": "^4.4.17"
+  }
+}

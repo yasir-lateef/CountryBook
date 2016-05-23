@@ -1,0 +1,185 @@
+body{
+	background:url('/inc/images/concrete_seamless.png');
+	font-size:16px;
+}
+
+header .masked{
+	padding:20px;
+}
+a{
+	text-shadow: 1px 1px 1px #aaa;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+.countries-list li{
+	margin:7px 5px;
+}
+
+.detail{
+	padding-top:25px;
+}
+
+.table{
+	font-size:17px;
+}
+#countryDetail tr td:nth-child(1){
+	font-weight: bold;
+}
+
+#attribName{
+	text-transform: capitalize;
+}
+header{
+	background: url('/inc/images/map (1).jpg');
+	background-position: left center;
+	background-repeat: none;
+	height:200px;
+	padding:20px;
+	color:#fff;
+	border-bottom: 3px solid #777;
+}
+header h1 small{
+	color:#ddd;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+}
+
+footer{
+	padding-top:15px;
+	margin-top:20px;
+	border-top: 2px solid #777;
+	background: url('/inc/images/footer_lodyas.png');
+	color:#aaa;
+}
+
+#copyright, #credit{
+	line-height: 30px;
+}
+
+#credit .fa, #credit a{
+	color:#ea5a4b;
+}
+
+/* TWBS Classes */
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+	border-color:#bbb;
+}
+
+.navbar{
+	border-radius:0;
+	margin-bottom: 0;
+}
+
+#view{
+	padding:35px;
+}
+
+#view .col-sm-6{
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	height:550px;
+	overflow: scroll;
+	overflow-x: hidden;	
+}
+#view #sidebar-left,#view #sidebar-right{
+	display: block;
+	float:left;
+	height:550px;
+	overflow: scroll;
+	overflow-x: hidden;	
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#view #sidebar-left #nav li{
+	padding:5px 10px;
+	margin-bottom: 1px;
+	-webkit-transition: all 0.6s ease-out; 
+	transition: all 0.6s ease-out;
+}
+
+#view #sidebar-left #nav li:hover{
+	background: #337ab7;
+}
+
+#view #sidebar-left #nav li:hover a{
+	color:#fff;
+	text-decoration: none;
+}
+
+/*#view #sidebar-right{
+	border-left: 4px solid #337ab7;
+}*/
+
+.padding-left{
+	padding-left:15px;
+}
+.masked{
+	background : rgba(0,0,0,0.4);
+}
+
+.list-underlined li{
+	border-bottom: 1px solid silver;
+	border-top: 1px solid silver;
+}
+
+
+#sidebar-left{
+	float:left;
+	position:relative;
+}
+
+/*Search Form*/
+
+.featurette {
+    display: table;
+    width: 100%;
+    height: 30%; /* set a pixel height and then remove the body,html height */
+    vertical-align: middle;
+    color: #fff;
+}
+.featurette-inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+.featurette .search {
+    padding: 3%;
+    max-width: 980px; /*max width of search*/
+    margin: 0 auto;
+}
+.no-margin-top {
+    margin-top: 0
+}
+
+
+/* ------ form-control-lg */
+.form-control-lg {
+    min-height: 46px;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: normal;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    background:transparent;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+		box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    /*-webkit-box-shadow: inset 0 0 6px rgba(20,20,20,0.7); */
+     background-color: skyblue;
+  background-image: -webkit-linear-gradient(top, #337ab7, skyblue); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+  background-image:         linear-gradient(to bottom, #337ab7, skyblue); /* Chrome */
+
+}

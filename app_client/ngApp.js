@@ -1,0 +1,1 @@
+var app = angular.module('CountryPedia', ['router','countriesCtrl', 'countriesService', 'regionsCtrl', 'regionsService']);

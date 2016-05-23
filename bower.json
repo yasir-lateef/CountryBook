@@ -1,0 +1,32 @@
+{
+  "name": "countrypedia",
+  "description": "small encyclopedia for countries of the world",
+  "main": "app.js",
+  "authors": [
+    "Yasir Lateef"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "encyclopedia",
+    "information",
+    "countries",
+    "regions",
+    "subregions"
+  ],
+  "homepage": "/app_client/ngSrc/view/index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "./app_client/lib/"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.3",
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5"
+  }
+}
