@@ -4,7 +4,12 @@
   "description": "small encyclopedia for countries of the world",
   "main": "app.js",
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "postinstall": "bower install"
+  },
+  "engines": {
+    "node": "4.4.3",
+    "npm": "2.1.x"
   },
   "keywords": [
     "encyclopedia",
@@ -16,6 +21,7 @@
   "author": "Yasir Lateef",
   "license": "MIT",
   "dependencies": {
+    "bower": "^1.7.9",
     "cors": "^2.7.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.17"
